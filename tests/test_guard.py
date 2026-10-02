@@ -290,6 +290,32 @@ class GuardTests(unittest.TestCase):
         self.assertEqual(r['status'],'FAIL');self.assertIn('report_limit',{f['code'] for f in r['findings']})
         self.assertTrue(any(f['status']=='FAIL' for f in r['findings']))
 
+    def test_new_failure_at_findings_boundary_keeps_evidence_and_global_status(self):
+        for unknowns, limit in [(1, Limits(findings=2)), (199, Limits())]:
+            with self.subTest(unknowns=unknowns):
+                data = config('alias /srv/static/;', prefix='/static',
+                              server='unknown private; ' * unknowns)
+                r = self.check(data, limits=limit)
+                self.assertEqual(r['status'], 'FAIL')
+                self.assertEqual(r['selected_rules']['alias_mapping'], 'FAIL')
+                self.assertFalse(r['coverage_complete'])
+                self.assertLessEqual(len(r['findings']), limit.findings)
+                failure = next(f for f in r['findings'] if f['status'] == 'FAIL')
+                self.assertEqual(failure['code'], 'alias_prefix_boundary')
+                self.assertEqual(failure['position']['byte_offset'], data.index(b'alias'))
+                self.assertIn('finding_limit', {f['code'] for f in r['findings']})
+
+    def test_earlier_failure_survives_later_findings_boundary(self):
+        from nginx_config_guard.report import Stop
+        r = Report(Limits(findings=2))
+        r.add('FAIL', 'first_failure', 'Fixed evidence.', rule='alias_mapping')
+        with self.assertRaises(Stop):
+            r.add('FAIL', 'second_failure', 'Later fixed evidence.', rule='allow_without_deny')
+        result = r.finish()
+        self.assertEqual(result['status'], 'FAIL')
+        self.assertEqual(len(result['findings']), 2)
+        self.assertEqual(result['findings'][0]['code'], 'first_failure')
+
     def test_limits_bad_types_raise_not_silent_defaults(self):
         for value in (0,False,'',{},[]):
             with self.assertRaises(TypeError):review_config(self.path,limits=value)
@@ -308,9 +334,26 @@ class GuardTests(unittest.TestCase):
                 self.assertEqual(main([str(self.path)]),code)
                 self.assertEqual(json.loads(output.getvalue())['status'],{0:'PASS',1:'FAIL',2:'OPEN'}[code])
         for option in ['--regex-redos-url','--output','--plugins','--vars-dirs','--write-config','--include-root']:
-            with mock.patch('sys.stderr',new_callable=io.StringIO),self.assertRaises(SystemExit) as e:
-                main([str(self.path),option])
-            self.assertEqual(e.exception.code,2)
+            with mock.patch('sys.stdout',new_callable=io.StringIO) as output, mock.patch('sys.stderr',new_callable=io.StringIO) as error:
+                self.assertEqual(main([str(self.path),option]),2)
+            self.assertEqual(json.loads(output.getvalue())['status'],'OPEN')
+            self.assertEqual(error.getvalue(),'')
+
+    def test_cli_argument_errors_never_echo_private_values(self):
+        for arguments in [[], [str(self.path), '--private-argument-marker'],
+                          [str(self.path), 'private-extra-position'],
+                          ['--output=private-report-path']]:
+            with mock.patch('sys.stdout',new_callable=io.StringIO) as output, mock.patch('sys.stderr',new_callable=io.StringIO) as error:
+                self.assertEqual(main(arguments), 2)
+            text = output.getvalue()
+            self.assertEqual(error.getvalue(), '')
+            self.assertNotIn(str(self.path), text)
+            for private in ('private-argument-marker', 'private-extra-position', 'private-report-path'):
+                self.assertNotIn(private, text)
+            report = json.loads(text)
+            self.assertEqual(report['status'], 'OPEN')
+            self.assertEqual(report['findings'][0]['code'], 'invalid_arguments')
+            self.assertEqual(report['application_eligibility'], 'OPEN')
 
 
 if __name__=='__main__':unittest.main()

@@ -18,7 +18,7 @@
     },
     {
       "path": "pyproject.toml",
-      "sha256": "c31851024422070faca1400e7a91c1253c5fc7a69ee07ee524a73cad5d9609b6",
+      "sha256": "a182b37e2037712670708acac084b599a500ce9f83210c1eb51d99d1a071176e",
       "bytes": 712,
       "lines": 23,
       "review": "FULL_SOURCE_READ"
@@ -32,9 +32,9 @@
     },
     {
       "path": "README.md",
-      "sha256": "bd7db7927a031f8185444b6a8a86d7561a3a9eb37b58884853227cda7d68f650",
-      "bytes": 9417,
-      "lines": 110,
+      "sha256": "09407d4859618dccb8ab95ce52cd61075ed183dc72d073127795f4a067f35edd",
+      "bytes": 9675,
+      "lines": 113,
       "review": "FULL_SOURCE_READ"
     },
     {
@@ -53,9 +53,9 @@
     },
     {
       "path": "VALIDATION.md",
-      "sha256": "20965f28fd8794effccae7cf5e9dbb9946fe085ad582630c2c2af1adb51b3dd6",
-      "bytes": 2060,
-      "lines": 30,
+      "sha256": "6a7d40e4d015a372c251d4d7f6bb7e16b209dd5667cb400e4958828a2a8a05ed",
+      "bytes": 3088,
+      "lines": 48,
       "review": "FULL_SOURCE_READ"
     },
     {
@@ -74,14 +74,14 @@
     },
     {
       "path": "tests/test_guard.py",
-      "sha256": "625a66edc98189d83475b70347230bd63adee89f76a4c2dbe75c7c9bde0249c6",
-      "bytes": 23498,
-      "lines": 316,
+      "sha256": "c9ff3fc9c8c8769ccadbfdd23d1d99e4cc4c2d970e8a1192cf658109773d5a2a",
+      "bytes": 26211,
+      "lines": 359,
       "review": "FULL_SOURCE_READ"
     },
     {
       "path": "src/nginx_config_guard/__init__.py",
-      "sha256": "db918ac30169c4725e8ee183726520b5edc6a29f1da43fa4025c9bcb792a8c94",
+      "sha256": "afbadb2813eb861b9e4918f5a03825c782466f9fc95359063450679168c4705a",
       "bytes": 199,
       "lines": 5,
       "review": "FULL_SOURCE_READ"
@@ -95,9 +95,9 @@
     },
     {
       "path": "src/nginx_config_guard/cli.py",
-      "sha256": "479419e83ee00da840e310af8c3bd8b39e4f53a0efd29a74a71caa73f533757c",
-      "bytes": 646,
-      "lines": 14,
+      "sha256": "05a185bc9c4e0cb855ee031efb3cce05ea2fbb948e941dd922be4883b812cd05",
+      "bytes": 1057,
+      "lines": 26,
       "review": "FULL_SOURCE_READ"
     },
     {
@@ -116,9 +116,9 @@
     },
     {
       "path": "src/nginx_config_guard/report.py",
-      "sha256": "79b23413aa0eca050e8f6a6e577e719e330303b69d4d89db51830a6c9ba7c4ff",
-      "bytes": 6219,
-      "lines": 124,
+      "sha256": "2078cf3e4d62fc2e49fb77ea4e418e30eeb8017a49c4b8688f2834425beb329c",
+      "bytes": 6767,
+      "lines": 132,
       "review": "FULL_SOURCE_READ"
     },
     {
@@ -134,7 +134,9 @@
     "upstream-token quote/escape behavior",
     "map first-use cache and nested source/branch cache effects",
     "symbolic URI boundary preserved through compound set/map values",
-    "strict Limits API types and every hard resource budget"
+    "strict Limits API types and every hard resource budget",
+    "first demonstrated FAIL survives last reserved finding slot with supporting position and global FAIL",
+    "invalid CLI arguments return private JSON OPEN without arbitrary argument echo"
   ],
   "implementation_compatibility": "Independent four-policy implementation, not complete Nginx/Gixy compatibility",
   "dependency_review": {
@@ -147,5 +149,7 @@
     },
     "third_party_build_source_full_audit": false
   },
-  "ci": "Pinned GitHub Actions references and Python 3.11/3.14 matrix definition read; hosted run not performed."
+  "ci": "Pinned existing Python 3.11/3.14 definition fully read; matching CI for version 0.1.1 remains pending publication. Prior version publication evidence is external.",
+  "reaudit_date": "2026-10-03 Asia/Tokyo",
+  "version": "0.1.1"
 }

@@ -110,5 +110,16 @@
   },
   "hosted_ci": "NOT_RUN",
   "nginx_execution": "NOT_RUN",
-  "application_eligibility": "OPEN"
+  "application_eligibility": "OPEN",
+  "reaudit_20261003": {
+    "version": "0.1.1",
+    "source_tests": 54,
+    "source_tests_status": "PASS",
+    "scope": "finding-cap FAIL retention and argument privacy; current matching CI/publication verified separately",
+    "fresh_install": {
+      "status": "PASS",
+      "tests": 54,
+      "environment": "Separate fresh offline environment outside source; no PYTHONPATH; installed wheel 0.1.1; no runtime dependencies"
+    }
+  }
 }

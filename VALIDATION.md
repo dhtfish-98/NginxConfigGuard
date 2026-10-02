@@ -1,5 +1,23 @@
 # Validation record
 
+## Version 0.1.1 omission review, 2026-10-03 (Asia/Tokyo)
+
+The review reproduced two defects in version 0.1.0: a first alias-policy FAIL
+arriving at the last finding slot was discarded from the global verdict, and
+argparse errors echoed arbitrary caller arguments. Version 0.1.1 retains the
+first demonstrated failure with its supporting position under finding/report
+caps and returns private JSON OPEN for argument errors.
+
+The 54 local source tests and the same 54 tests against a fresh offline wheel
+installation pass. New regressions exercise both the default 200-finding cap
+and a lower cap of two, preservation of an earlier FAIL, invalid argument privacy,
+CLI exit codes and unchanged input bytes. The final source/wheel/installed modules,
+complete retained notices and sdist source bytes are checked independently.
+Matching hosted CI and publication for this revision require separate verification
+after the final commit; this local record does not establish that outcome.
+
+## Original version 0.1.0 local observations
+
 Local validation date: 2026-10-02 (Asia/Tokyo). Machine-readable evidence records
 source test count, actual interpreter/platform, independently installed CLI,
 input hashes/immutability and package source/full-notice identity. Final artifact

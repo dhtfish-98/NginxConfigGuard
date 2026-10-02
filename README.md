@@ -80,8 +80,11 @@ scopes, 32 levels of nesting/variable resolution, 512 scoped variables, 16 finit
 alternatives, 256 map entries, 50,000 model steps, 200 findings and 128 KiB JSON.
 The library `Limits` argument can tighten these; it cannot raise the defaults.
 Wrong types raise TypeError and invalid values ValueError. Budget exhaustion,
-parse failures and report reduction retain explicit OPEN and positions. A reduced
-report preserves the first recorded FAIL.
+parse failures and report reduction retain explicit OPEN and positions. The first
+demonstrated FAIL and its supporting position survive finding/report caps,
+including a failure first observed at the last reserved finding slot. Argument
+errors also return a fixed private JSON OPEN report and exit 2 without echoing
+caller arguments; explicit help/version remain informational text.
 
 ## Verification and references
 

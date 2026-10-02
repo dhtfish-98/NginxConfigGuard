@@ -41,6 +41,7 @@ class Report:
     def __init__(self, limits):
         self.limits = limits
         self.steps = 0
+        self.first_failure = None
         self.data = {'schema': 'nginx-config-guard/1', 'status': 'OPEN',
                      'result_scope': 'four selected static HTTP configuration policies',
                      'deployment_security': 'OPEN', 'nginx_configuration_validity': 'OPEN',
@@ -61,10 +62,17 @@ class Report:
         finding = {'status': status, 'code': code, 'rule': rule,
                    'position': node.position() if node is not None else None,
                    'related_positions': [n.position() for n in related[:8]], 'detail': detail}
+        if status == 'FAIL' and self.first_failure is None:
+            self.first_failure = finding
         if len(self.data['findings']) >= self.limits.findings - 1:
-            self.data['findings'].append({'status': 'OPEN', 'code': 'finding_limit', 'rule': None,
+            retained = self.data['findings'][:self.limits.findings - 1]
+            # A newly demonstrated failure must survive the last reserved slot.
+            # Keep its supporting position rather than only the selected-rule flag.
+            if self.first_failure is not None and self.first_failure not in retained:
+                retained[-1] = self.first_failure
+            self.data['findings'] = retained + [{'status': 'OPEN', 'code': 'finding_limit', 'rule': None,
                                          'position': finding['position'], 'related_positions': [],
-                                         'detail': 'Finding budget exhausted; review is partial.'})
+                                         'detail': 'Finding budget exhausted; review is partial.'}]
             self.data['coverage_complete'] = False
             raise Stop
         self.data['findings'].append(finding)
@@ -84,7 +92,7 @@ class Report:
                 if value == 'PASS':
                     self.data['selected_rules'][rule] = 'OPEN'
         flags = {f['status'] for f in self.data['findings']}
-        self.data['status'] = 'FAIL' if 'FAIL' in flags else ('OPEN' if 'OPEN' in flags or not self.data['parse_complete'] or not self.data['coverage_complete'] else 'PASS')
+        self.data['status'] = 'FAIL' if self.first_failure is not None or 'FAIL' in flags else ('OPEN' if 'OPEN' in flags or not self.data['parse_complete'] or not self.data['coverage_complete'] else 'PASS')
         if len(json.dumps(self.data, ensure_ascii=True).encode()) > self.limits.report_bytes:
             fail = next((f for f in self.data['findings'] if f['status'] == 'FAIL'), None)
             self.data['scopes'] = []
