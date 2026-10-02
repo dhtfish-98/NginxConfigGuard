@@ -1,0 +1,114 @@
+{
+  "date": "2026-10-02",
+  "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "platform": "macOS-26.7-arm64-arm-64bit-Mach-O",
+  "source_tests": {
+    "count": 51,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "result": "PASS"
+  },
+  "independent_installed_tests": {
+    "count": 51,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "result": "PASS"
+  },
+  "consumer_cli": {
+    "installed_from_wheel": "offline --no-index --no-deps",
+    "outside_source_tree": true,
+    "PYTHONPATH": "UNSET",
+    "cli_cases": [
+      {
+        "case": "baseline",
+        "exit": 0,
+        "status": "PASS",
+        "snapshot_sha256": "25b8a83626a803608145d1349f743097a5e93f377e3ebe7fd4a0a0ffa700492d",
+        "input_unchanged": true
+      },
+      {
+        "case": "alias",
+        "exit": 1,
+        "status": "FAIL",
+        "snapshot_sha256": "a382af79fb0972d30be91cdb7e8fbe7082e3a5b8d1c92eba93420bbecc10e8a4",
+        "input_unchanged": true
+      },
+      {
+        "case": "acl",
+        "exit": 1,
+        "status": "FAIL",
+        "snapshot_sha256": "60b9ca574d6a3e3e06200329c5d2bd900710b80b24e6eaac05f880aae27d7a4f",
+        "input_unchanged": true
+      },
+      {
+        "case": "phase",
+        "exit": 1,
+        "status": "FAIL",
+        "snapshot_sha256": "01105dc8b5d95d276bc7d2148c10c692cf0f5f71301169aecec5dd15a8a0af5e",
+        "input_unchanged": true
+      },
+      {
+        "case": "proxy",
+        "exit": 1,
+        "status": "FAIL",
+        "snapshot_sha256": "cb367202bf3420bc4e6c5f61db6ab467744abc22961f32575b62552fe4a1e0dc",
+        "input_unchanged": true
+      },
+      {
+        "case": "include",
+        "exit": 2,
+        "status": "OPEN",
+        "snapshot_sha256": "64e08abef3ab9c599bc05bcc787c2ff91453d6a592f7a3309c58ea207f5b80ed",
+        "input_unchanged": true
+      },
+      {
+        "case": "query",
+        "exit": 2,
+        "status": "OPEN",
+        "snapshot_sha256": "000c1f7e7a549a192e53261bca630589254ef67e68c74975b02b067c32c28142",
+        "input_unchanged": true
+      },
+      {
+        "case": "fragment",
+        "exit": 2,
+        "status": "OPEN",
+        "snapshot_sha256": "75978e9a1adccc31fb4a00d14a63bf64e0b2f2138dbb4ca8c6828a970b948f03",
+        "input_unchanged": true
+      },
+      {
+        "case": "truncated",
+        "exit": 2,
+        "status": "OPEN",
+        "snapshot_sha256": "9df10491b0e585cb4851758bf077450a07a7fddaa3e4c57967b6c9bd5e5a2c37",
+        "input_unchanged": true
+      },
+      {
+        "case": "compound",
+        "exit": 0,
+        "status": "PASS",
+        "snapshot_sha256": "d180be0ebda244649d5e6ea413b88ebe50ef4ee6f24e501378372c575c4e0674",
+        "input_unchanged": true
+      },
+      {
+        "case": "map",
+        "exit": 0,
+        "status": "PASS",
+        "snapshot_sha256": "9dbaee31bd0d4409129beadf1fba3c87bacfed9e2c58d3549e570f7bb399cd71",
+        "input_unchanged": true
+      }
+    ],
+    "version_help_and_module_cli": "PASS",
+    "removed_execution_flags": "REJECTED"
+  },
+  "source_package_identity": {
+    "runtime_source_exact_identity": true,
+    "complete_notices_exact_identity": true,
+    "sdist_all_18_reviewed_files_and_evidence_exact_identity": true,
+    "runtime_dependencies": []
+  },
+  "hosted_ci": "NOT_RUN",
+  "nginx_execution": "NOT_RUN",
+  "application_eligibility": "OPEN"
+}

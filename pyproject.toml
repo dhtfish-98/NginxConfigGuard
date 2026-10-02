@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools==80.9.0", "wheel==0.45.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nginx-config-guard"
+version = "0.1.0"
+description = "Bounded offline HTTP Nginx configuration scopes and four defensive policies"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE", "licenses/Gixy-Next-MPL-2.0.txt"]
+authors = [{name = "NginxConfigGuard contributors (AI-assisted implementation)"}]
+dependencies = []
+
+[project.scripts]
+nginx-config-guard = "nginx_config_guard.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.data-files]
+"share/nginx-config-guard" = ["ORIGIN.md", "DEFENSIVE_SCOPE.md", "VALIDATION.md"]

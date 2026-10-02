@@ -1,0 +1,281 @@
+{
+  "project": "MegaManSec/Gixy-Next",
+  "fixed_commit": "a94d1fcedcfcb30f16011fba40c6dab8940f0592",
+  "selected_source_full_review": true,
+  "full_repository_review": false,
+  "reviewed_files": [
+    {
+      "path": "gixy/parser/raw_parser.py",
+      "sha256": "71040a1402703b1843266473b767be03c92bfa66a4f7290bf5a4e1249c273499",
+      "bytes": 11114,
+      "lines": 306,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "gixy/parser/nginx_parser.py",
+      "sha256": "8716fd68ec063b4efd1bac83c422dfeae9617c2867acec0473544191efb3a5aa",
+      "bytes": 18553,
+      "lines": 461,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "gixy/parser/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "lines": 0,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "gixy/directives/block.py",
+      "sha256": "a1f9f738962dab0fd8f6a8517bcb78b712645982e5094401237fe0555d0c932c",
+      "bytes": 11828,
+      "lines": 392,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "gixy/directives/directive.py",
+      "sha256": "326979c8f01898a9fcbc1ef28bceaff28fb9ea2ed04414ea866184f7e1e4007b",
+      "bytes": 15085,
+      "lines": 479,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "gixy/directives/__init__.py",
+      "sha256": "033e1ce8e535a8fc439cef526f4fe6750c788be0051ed3b3006ab7f413a8a1d0",
+      "bytes": 674,
+      "lines": 28,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "gixy/core/context.py",
+      "sha256": "6c7f4f103924754d3f79ffdd2f8447a632e71bb321cb2bbe2ae77ad225f3a390",
+      "bytes": 3030,
+      "lines": 106,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "gixy/core/variable.py",
+      "sha256": "035ca842f709be78f71d60a9813ff90ee42b0519686fd19ba81acd520e712d29",
+      "bytes": 10745,
+      "lines": 309,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "gixy/core/builtin_variables.py",
+      "sha256": "2c46480fa8b2c7767b0abbebcae63d1c8685527f8e5a273c894c9189cd5249fa",
+      "bytes": 20807,
+      "lines": 438,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "gixy/core/utils.py",
+      "sha256": "926c0ffd4ab01157b4c741eee9395e6b9c4b74b2bfdba14fee5fc8348ed84f8a",
+      "bytes": 844,
+      "lines": 26,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "gixy/core/manager.py",
+      "sha256": "ad8ba4a1f8371d0bf79739f3d36cb6a429220dca637c1d17c225d7257953d30f",
+      "bytes": 7605,
+      "lines": 190,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "gixy/core/plugins_manager.py",
+      "sha256": "b85d35d5e835c14666423706e7ad1dad1e3888c295c6c4a51fe5e6f6e6fdf1d9",
+      "bytes": 5698,
+      "lines": 152,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "gixy/plugins/plugin.py",
+      "sha256": "ad9c655d427ea4b2a6733aa55631949508e43302a9bd84420f3f21c05743bb00",
+      "bytes": 1273,
+      "lines": 55,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "gixy/plugins/alias_traversal.py",
+      "sha256": "b0033bc1019815dc4bd9728ffbefd3ad0061388985fc78ec05470c798153d61a",
+      "bytes": 4035,
+      "lines": 118,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "gixy/plugins/allow_without_deny.py",
+      "sha256": "ceae1f9600c890fb90d905db7807645f780960a926aaa620ba629c8db4ab4608",
+      "bytes": 2544,
+      "lines": 69,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "gixy/plugins/return_bypasses_allow_deny.py",
+      "sha256": "ccdfb93de8fc2fc621d5b35b923cddaf4b96af99a662d04fd134c88a024006c0",
+      "bytes": 4376,
+      "lines": 116,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "gixy/plugins/ssrf.py",
+      "sha256": "9db42e0f739c7b718147667315d4d37e148f35158e53dd7dd935f08157eab754",
+      "bytes": 2212,
+      "lines": 67,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "gixy/plugins/regex_redos.py",
+      "sha256": "1ed2a30a28e59bf71d956a4385e5a120a9aadb7e6b3ce1df715e8985ec87c1fa",
+      "bytes": 6121,
+      "lines": 161,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "gixy/core/exceptions.py",
+      "sha256": "975d79a395d6c1f4963bcc9d225cd323384968fd9cbcf98fe9d437a690439d8e",
+      "bytes": 1093,
+      "lines": 26,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "gixy/core/issue.py",
+      "sha256": "d23e82d5add8ee53729608ec1d8065b92add88a9ecb3e07d6af4f359ce29b3f5",
+      "bytes": 618,
+      "lines": 23,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "gixy/core/diagnostics.py",
+      "sha256": "8fb9233cc9ffb9a3cd00fe36b260cc0ed4c9ee58525f4c4a2a58a3de26143838",
+      "bytes": 1388,
+      "lines": 47,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "gixy/core/config.py",
+      "sha256": "5bb582f0189f6a1be57b0d145eb8b75743c333cd2c8bb5d871cc25c07b270e11",
+      "bytes": 838,
+      "lines": 33,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "gixy/cli/main.py",
+      "sha256": "15bf6b9ae1b799615bae0d9c48a72c9bbef7acabbfc4732ae9b3c28119d14344",
+      "bytes": 14647,
+      "lines": 449,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "gixy/cli/argparser.py",
+      "sha256": "04b6d237e3d2857af499b95ce8f55541aae49644e37db1787b5ecaccd027b2da",
+      "bytes": 8047,
+      "lines": 224,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "gixy/__init__.py",
+      "sha256": "82438311e1801d82c2a9b108dd5f12ca82df8987a501f141c9d82cae025db8dc",
+      "bytes": 106,
+      "lines": 8,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "gixy/cli/__init__.py",
+      "sha256": "8db174b45350b7d4d77dda4b1e106506f1818f77664aee88a92ed2aed79b06ae",
+      "bytes": 464,
+      "lines": 11,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "gixy/__main__.py",
+      "sha256": "7a894b35ea1a2911766de9777acbdda0bd7fbda5e0a8b8e6bb7b53455998a7f9",
+      "bytes": 87,
+      "lines": 5,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "gixy/cli/__main__.py",
+      "sha256": "9fea65484dfc01160d8838501f07a1e43ae64fd35e9a5a6b398984efaf9c051f",
+      "bytes": 71,
+      "lines": 5,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "gixy/core/severity.py",
+      "sha256": "eac4935acbca9d2a4238314653a43fea9d6725f624caf54441cd667960c86c69",
+      "bytes": 230,
+      "lines": 9,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "7bb342d1704b0a72412f2dbe1ad8fd0ce773de1927d8df836958f103df060404",
+      "bytes": 15975,
+      "lines": 357,
+      "review": "FULL_SOURCE_READ"
+    }
+  ],
+  "excluded": [
+    "other plugins",
+    "formatters",
+    "upstream tests",
+    "crossplane/regex/tldextract implementation",
+    "upstream build/CI implementation"
+  ],
+  "removed_paths": [
+    "remote regex Recheck/HTTP POST",
+    "dynamic plugin importing",
+    "temp configuration writes",
+    "include/file traversal",
+    "custom variable drop-in reads",
+    "config/report writing",
+    "Lua/Perl execution"
+  ],
+  "official_semantic_references": [
+    {
+      "url": "https://raw.githubusercontent.com/nginx/nginx/release-1.28.0/src/core/ngx_conf_file.c",
+      "sha256": "e9ee871bea5dc85d74836e40f8de1d7ab8729cbbf2b6afc0311b4fee11dfe274",
+      "bytes": 34400,
+      "selected_read_ranges": [
+        [
+          472,
+          768
+        ]
+      ],
+      "full_module_review": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/nginx/nginx/release-1.28.0/src/core/ngx_inet.c",
+      "sha256": "d45853bd6f695e4ef760cb66f64d5c1ee59ae193bf9f8559d53430856925859c",
+      "bytes": 30899,
+      "selected_read_ranges": [
+        [
+          787,
+          985
+        ],
+        [
+          989,
+          1065
+        ]
+      ],
+      "full_module_review": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/nginx/nginx/release-1.28.0/src/http/modules/ngx_http_proxy_module.c",
+      "sha256": "5b62934a54b713aacb46c58882148f3b520b9e1f9db1fa85793b049ce0cf3f46",
+      "bytes": 152546,
+      "selected_read_ranges": [
+        [
+          1040,
+          1140
+        ],
+        [
+          4410,
+          4465
+        ]
+      ],
+      "full_module_review": false
+    }
+  ],
+  "boundary": "Only literal slash delimits supported proxy authority; ?/# before slash remains OPEN; selected official C source reference is partial, not full Nginx audit."
+}
