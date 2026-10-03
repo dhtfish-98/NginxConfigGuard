@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "project": "NginxConfigGuard",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "author": "dhtfish98",
   "scope": "Current selected implementation and repository files; self manifest excluded to avoid a hash cycle. Upstream source commits remain in ORIGIN/source review records.",
   "files": [
@@ -27,13 +27,13 @@
     },
     {
       "path": "MANIFEST.in",
-      "sha256": "872f8013878323938ef8badb628da8d2d88ae1685909560360006d38d3372781",
-      "bytes": 238
+      "sha256": "bdcf34b6e26b4e62fb4176a603dd4a32abe0abfcfe8350f69c31d422f5050ca7",
+      "bytes": 205
     },
     {
       "path": "ORIGIN.md",
-      "sha256": "e76c65f2a05476848950515b6838be043b45a304acc35a520625e795b67d8e91",
-      "bytes": 2763
+      "sha256": "e941e45b77c75a2d2640db2b920a0217b877844048f9e7b564ee5a7925545b32",
+      "bytes": 2599
     },
     {
       "path": "README.md",
@@ -42,8 +42,8 @@
     },
     {
       "path": "VALIDATION.md",
-      "sha256": "6518cb63db6e899797708828e57be96043701cf3499380f5e9edca80de55c963",
-      "bytes": 4261
+      "sha256": "319d8515721c9ff67dc454c1b81cdfe7db9c8c2d9ffeff1b6912ec445442f618",
+      "bytes": 5600
     },
     {
       "path": "evidence/source-review.json",
@@ -61,18 +61,13 @@
       "bytes": 3793
     },
     {
-      "path": "licenses/Gixy-Next-MPL-2.0.txt",
-      "sha256": "7bb342d1704b0a72412f2dbe1ad8fd0ce773de1927d8df836958f103df060404",
-      "bytes": 15975
-    },
-    {
       "path": "pyproject.toml",
-      "sha256": "1f72eb81184585bc10ab69289a58ba98f89da01df24c9faea990dcf57ff2b9ac",
-      "bytes": 700
+      "sha256": "780d0832a1cf9f44eafe08cf55daa2750d8f54914b5c338ffc7d2276a8eb6bd7",
+      "bytes": 666
     },
     {
       "path": "src/nginx_config_guard/__init__.py",
-      "sha256": "94fafe4d979c68b9f249e44c4e86c1e7fe4f850adca4bdbd57b46af40ea3a7a0",
+      "sha256": "88db412fb102d5971038c41e7dcbee42f95a5962308a4c7e4aa1791946fbacaf",
       "bytes": 199
     },
     {
@@ -110,5 +105,6 @@
       "sha256": "033d300612026607e1ce325493d30b9dec3486147afab14b09b9b3f37a57a2cc",
       "bytes": 27808
     }
-  ]
+  ],
+  "license_cleanup": "Only approved reference-only copies removed; applicable data/code/terms and own LICENSE preserved."
 }

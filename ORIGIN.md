@@ -27,12 +27,10 @@ finite map provenance/cache, protocol/authority boundaries, four frozen defensiv
 policies, unknown propagation and targeted regression tests. Complete upstream
 compatibility and complete Nginx semantics are explicitly excluded.
 
-Upstream copyright/licensing notice by Joshua Rogers (2025), Danila Vershinin
-(2024), YANDEX LLC (2017), plus its complete original LICENSE bytes, are preserved
-unchanged in `licenses/Gixy-Next-MPL-2.0.txt` (MPL-2.0). This is source-reference
-attribution; it does not convert upstream work to MIT. The independent new code is
-MIT under LICENSE; both texts ship in wheel and sdist. Any future incorporation of
-upstream implementation must preserve its applicable MPL obligations.
+Gixy-Next is a source/design reference only; its implementation, tests and data
+are not redistributed. The unused reference-only MPL license copy was removed.
+The new implementation remains MIT under LICENSE. This does not change the
+upstream project's licensing or authorship; its fixed source link above remains.
 
 The attribution to dhtfish98 applies to this new implementation and its maintenance.
 Original source authors and licenses remain attributed separately. This record
