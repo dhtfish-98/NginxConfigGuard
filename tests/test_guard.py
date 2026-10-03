@@ -277,6 +277,32 @@ class GuardTests(unittest.TestCase):
             r=review_config(path);self.assertEqual(r['status'],'OPEN',r)
             if len(path)>1:self.assertNotIn(path,json.dumps(r))
 
+    def test_missing_safe_open_flags_never_read_regular_or_symlink(self):
+        self.path.write_bytes(config())
+        link = self.root / 'missing-flags-link'
+        link.symlink_to(self.path)
+        self.assertEqual(review_config(self.path)['status'], 'PASS')
+        self.assertEqual(review_config(link)['status'], 'OPEN')
+        for flag in ('O_NOFOLLOW', 'O_NONBLOCK'):
+            for mode in ('missing', 'zero', 'none', 'bool', 'text', 'float'):
+                with self.subTest(flag=flag, mode=mode):
+                    old = getattr(os, flag)
+                    try:
+                        if mode == 'missing':
+                            delattr(os, flag)
+                        else:
+                            setattr(os, flag, {"zero": 0, "none": None, "bool": True, "text": "1", "float": 1.0}[mode])
+                        with mock.patch('nginx_config_guard.report.os.open', side_effect=AssertionError('must not open')):
+                            for path in (self.path, link):
+                                report = review_config(path)
+                                self.assertEqual(report['status'], 'OPEN')
+                                self.assertEqual(report['findings'][0]['code'], 'safe_open_flags_unavailable')
+                            with mock.patch('sys.stdout', new_callable=io.StringIO) as output:
+                                self.assertEqual(main([str(self.path)]), 2)
+                            self.assertEqual(json.loads(output.getvalue())['status'], 'OPEN')
+                    finally:
+                        setattr(os, flag, old)
+
     def test_all_budgets_retain_open(self):
         cases=[('input_limit',config(),dict(input_bytes=10)),('token_limit',config(),dict(tokens=2)),('token_bytes',config(),dict(token_bytes=2)),('argument_limit',config('proxy_set_header A B C;'),dict(arguments=1)),('node_limit',config(),dict(nodes=2)),('scope_limit',config(),dict(scopes=2)),('nesting_limit',config(),dict(nesting=2)),('variable_limit',config('set $a fixed; set $b fixed;'),dict(variables=1)),('map_limit',config('',http='map $arg_x $target { default fixed; key other; }'),dict(map_entries=1)),('alternative_limit',config('proxy_pass http://$target/;',http='map $arg_x $target { default fixed; key other; }'),dict(alternatives=1)),('model_limit',config(),dict(model_steps=1)),('expansion_bytes',config('set $a "'+('x'*60)+'"; set $b $a$a; proxy_pass http://$b/;'),dict(token_bytes=64))]
         for code,data,values in cases:

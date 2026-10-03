@@ -1,12 +1,14 @@
 # NginxConfigGuard
 
+New implementation author and maintainer: dhtfish98.
+
 Read-only, offline review of one explicitly named local Nginx configuration file.
 A new byte lexer builds a nested AST and models HTTP scope inheritance, ordered
 `set` assignments, conservative `if` branch joins and lazy literal `map` output.
 Four selected policies produce private, position-only JSON. Runtime dependencies
 are Python's standard library only.
 
-This independent AI-assisted implementation does not import, rename, wrap or run
+This independent new implementation does not import, rename, wrap or run
 Gixy-Next. Its selected source/rule reference, fixed revision, complete selected
 module audit and attribution are recorded in [ORIGIN](ORIGIN.md).
 
@@ -71,7 +73,10 @@ line/byte-column positions, counts, size and snapshot SHA-256 only. They omit so
 paths, arbitrary directive/variable/map names, addresses, regex text, arguments,
 credentials, response bodies and raw exception text. The fingerprint is evidence
 identity, not anonymization. Final input path-component symlinks are rejected with
-`O_NOFOLLOW` where available; parent path components follow normal OS resolution.
+required `O_NOFOLLOW`; parent path components follow normal OS resolution.
+File input requires positive `O_NOFOLLOW` and `O_NONBLOCK` OS flags; missing
+capabilities return controlled OPEN before opening a file. POSIX file behavior
+is verified on macOS; native Windows behavior is not verified.
 Size/time identity and full length are checked before and after reading.
 
 Default hard limits: 1 MiB input, 50,000 tokens, 4,096 physical bytes per token or

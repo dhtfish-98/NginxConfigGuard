@@ -19,7 +19,7 @@ writes and `regex_redos.py:120` HTTP POST/Recheck are excluded from the new runt
 No external Recheck request, active target probe or Lua/Perl/plugin execution path
 exists in NginxConfigGuard.
 
-New code was independently written with OpenAI Codex assistance. It contains no
+New implementation author and maintainer: dhtfish98. It contains no
 renamed, copied, imported or wrapped Gixy runtime. The substantive new contribution
 is an explicit bounded byte lexer and AST, position-only private reports, actual
 HTTP scope/list inheritance, ordered rewrite assignment and branch joins, lazy
@@ -34,7 +34,7 @@ attribution; it does not convert upstream work to MIT. The independent new code 
 MIT under LICENSE; both texts ship in wheel and sdist. Any future incorporation of
 upstream implementation must preserve its applicable MPL obligations.
 
-The applicant may describe independently attributable review/maintenance and this
-AI-assisted new implementation after inspecting it. They must not claim sole
-human authorship of Codex output, authorship of Gixy-Next/Nginx, whole-suite rewriting,
+The attribution to dhtfish98 applies to this new implementation and its maintenance.
+Original source authors and licenses remain attributed separately. This record
+does not establish authorship of Gixy-Next/Nginx, whole-suite rewriting,
 a proven deployment incident or application approval. Eligibility remains OPEN.

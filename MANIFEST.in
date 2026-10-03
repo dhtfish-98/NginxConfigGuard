@@ -3,3 +3,5 @@ recursive-include licenses *.txt
 recursive-include tests *.py
 recursive-include .github *.yml
 recursive-include evidence *.json
+
+include SOURCE_MANIFEST.json

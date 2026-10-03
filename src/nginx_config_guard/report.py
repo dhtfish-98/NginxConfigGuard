@@ -114,7 +114,10 @@ def read_local(path, report):
     value = os.fspath(path)
     if not isinstance(value, str) or not value or value == '-' or value.startswith('@') or '://' in value:
         report.stop('input_contract', 'One explicit local regular file is required; URL/stdin/@list unsupported.')
-    flags = os.O_RDONLY | getattr(os, 'O_NONBLOCK', 0) | getattr(os, 'O_NOFOLLOW', 0)
+    if any(type(getattr(os, name, None)) is not int or getattr(os, name, 0) <= 0
+           for name in ('O_NOFOLLOW', 'O_NONBLOCK')):
+        report.stop('safe_open_flags_unavailable', 'Required no-follow and nonblocking file-open capabilities are unavailable.')
+    flags = os.O_RDONLY | os.O_NONBLOCK | os.O_NOFOLLOW
     with os.fdopen(os.open(value, flags), 'rb') as handle:
         before = os.fstat(handle.fileno())
         if not stat.S_ISREG(before.st_mode):

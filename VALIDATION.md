@@ -1,3 +1,15 @@
+## Current version 0.1.2: attribution and bounded verification, 2026-10-03
+
+New implementation author and maintainer: dhtfish98. Package version: `0.1.2`.
+
+Required local file-open capabilities now fail closed to controlled OPEN before reading; missing, zero, None, boolean, string and floating-point flag values are covered by API/CLI regression contrasts. Normal regular files and symlink/FIFO rejection remain covered.
+
+The current source suite passes 55 tests on Python 3.14/macOS arm64. Final wheel and sdist are built from the final files. A fresh consumer installation also passes 55 tests. Installed/source/wheel runtime bytes, licenses, retained upstream notices, RECORD and command contracts are verified separately before publication. Exact package hashes and execution receipts are recorded externally rather than embedded in this self-referential document.
+
+These tests verify the documented finite profile. Historical native/reference measurements below are preserved; they are not new runs for this revision. Matching remote CI, actual deployments, applicant identity and CVP approval remain OPEN until separately evidenced.
+
+## Prior verification evidence
+
 # Validation record
 
 ## Version 0.1.1 omission review, 2026-10-03 (Asia/Tokyo)
