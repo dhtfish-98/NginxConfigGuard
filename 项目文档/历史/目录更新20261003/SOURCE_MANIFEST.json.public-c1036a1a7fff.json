@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "project": "NginxConfigGuard",
+  "version": "0.1.3",
+  "author": "dhtfish98",
+  "scope": "Current selected implementation and repository files; self manifest excluded to avoid a hash cycle. Upstream source commits remain in ORIGIN/source review records.",
+  "files": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "f37a33f74ca1002c1916dc28f06fa0f2ffc0e7041d33f9501e870fb1d328aa88",
+      "bytes": 907
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "7d3a0ea4421b6f58c5349a25c52b19a254d0a06b6cd48dcbe25a87751fe2bd9b",
+      "bytes": 60
+    },
+    {
+      "path": "DEFENSIVE_SCOPE.md",
+      "sha256": "d12e082d70b513882382e365daf603c36e98166f7b494ffa212aad74dcf80228",
+      "bytes": 1146
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "de926d6c22d9e061af6158b0f23146ce036bfb2a562f2f406acec2dc4bd8b298",
+      "bytes": 1066
+    },
+    {
+      "path": "MANIFEST.in",
+      "sha256": "bdcf34b6e26b4e62fb4176a603dd4a32abe0abfcfe8350f69c31d422f5050ca7",
+      "bytes": 205
+    },
+    {
+      "path": "ORIGIN.md",
+      "sha256": "e941e45b77c75a2d2640db2b920a0217b877844048f9e7b564ee5a7925545b32",
+      "bytes": 2599
+    },
+    {
+      "path": "README.md",
+      "sha256": "377739edcb71e0ed606033577c62227eb72060084230b8de7b4113bba7192912",
+      "bytes": 9933
+    },
+    {
+      "path": "VALIDATION.md",
+      "sha256": "319d8515721c9ff67dc454c1b81cdfe7db9c8c2d9ffeff1b6912ec445442f618",
+      "bytes": 5600
+    },
+    {
+      "path": "evidence/source-review.json",
+      "sha256": "e8a0131cd1c7da35a4c91c4300c46f48c14d93fcfb4037648c058704b09ea844",
+      "bytes": 5026
+    },
+    {
+      "path": "evidence/upstream-review.json",
+      "sha256": "b069d693db898f1e7e14f31c01818b8d7cea21c9938cda3995a869bc3b956a41",
+      "bytes": 8381
+    },
+    {
+      "path": "evidence/validation.json",
+      "sha256": "0bdba4f061fca7ac6d5e524387f46b3b47927f69d9b6a48c09bf96dbe8dbdd44",
+      "bytes": 3793
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "780d0832a1cf9f44eafe08cf55daa2750d8f54914b5c338ffc7d2276a8eb6bd7",
+      "bytes": 666
+    },
+    {
+      "path": "src/nginx_config_guard/__init__.py",
+      "sha256": "88db412fb102d5971038c41e7dcbee42f95a5962308a4c7e4aa1791946fbacaf",
+      "bytes": 199
+    },
+    {
+      "path": "src/nginx_config_guard/__main__.py",
+      "sha256": "79ee6f134c5c5193377cf9b189cbdcc3e2095e49ba9cec310114441c15a917c4",
+      "bytes": 47
+    },
+    {
+      "path": "src/nginx_config_guard/cli.py",
+      "sha256": "05a185bc9c4e0cb855ee031efb3cce05ea2fbb948e941dd922be4883b812cd05",
+      "bytes": 1057
+    },
+    {
+      "path": "src/nginx_config_guard/model.py",
+      "sha256": "480256cdaff897170a3f0af751b92adda105ae8eb321595792583f2a2497edb9",
+      "bytes": 30574
+    },
+    {
+      "path": "src/nginx_config_guard/parser.py",
+      "sha256": "0cad95b7529118f6e74d97f23b7fda4c245ab78c8963083f5fcb54129deaaa8a",
+      "bytes": 8174
+    },
+    {
+      "path": "src/nginx_config_guard/report.py",
+      "sha256": "57e444d84b4064bf298e722c30be301d3fe5f04c7ae57df57368fe3f89cdedf6",
+      "bytes": 7001
+    },
+    {
+      "path": "src/nginx_config_guard/review.py",
+      "sha256": "0e8b57b73fd307be83cebf29f19df324749bc6ec307b94988dfab1612d1f4694",
+      "bytes": 812
+    },
+    {
+      "path": "tests/test_guard.py",
+      "sha256": "033d300612026607e1ce325493d30b9dec3486147afab14b09b9b3f37a57a2cc",
+      "bytes": 27808
+    }
+  ],
+  "license_cleanup": "Only approved reference-only copies removed; applicable data/code/terms and own LICENSE preserved."
+}

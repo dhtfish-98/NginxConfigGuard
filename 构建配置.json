@@ -1,0 +1,35 @@
+{
+  "schema": "project-build-layout.v1",
+  "project": "NginxConfigGuard",
+  "author": "dhtfish98",
+  "kind": "python",
+  "base_public_commit": "c1036a1a7fff48a5cf325b4703b3adaae5c750cd",
+  "restored_inputs": [
+    {
+      "original": "DEFENSIVE_SCOPE.md",
+      "stored": "项目文档/DEFENSIVE_SCOPE.md",
+      "sha256": "d12e082d70b513882382e365daf603c36e98166f7b494ffa212aad74dcf80228"
+    },
+    {
+      "original": "LICENSE",
+      "stored": "项目文档/LICENSE",
+      "sha256": "de926d6c22d9e061af6158b0f23146ce036bfb2a562f2f406acec2dc4bd8b298"
+    },
+    {
+      "original": "ORIGIN.md",
+      "stored": "项目文档/ORIGIN.md",
+      "sha256": "e941e45b77c75a2d2640db2b920a0217b877844048f9e7b564ee5a7925545b32"
+    },
+    {
+      "original": "README.md",
+      "stored": "项目文档/README.md",
+      "sha256": "1c0fda4c07f27fdb6b6832d8f08f6e7e9a1abb8974b3985602921518b81a52bc"
+    },
+    {
+      "original": "VALIDATION.md",
+      "stored": "项目文档/VALIDATION.md",
+      "sha256": "319d8515721c9ff67dc454c1b81cdfe7db9c8c2d9ffeff1b6912ec445442f618"
+    }
+  ],
+  "platform_entries": []
+}
