@@ -1,7 +1,7 @@
 include .gitignore 项目文档/LICENSE 项目文档/README.md 项目文档/ORIGIN.md 项目文档/DEFENSIVE_SCOPE.md 项目文档/VALIDATION.md
 recursive-include tests *.py
 recursive-include .github *.yml
-recursive-include evidence *.json
+recursive-include 项目文档/evidence *.json
 
 include SOURCE_MANIFEST.json
 

@@ -17,21 +17,21 @@
     },
     {
       "path": "MANIFEST.in",
-      "sha256": "2ab8d4b64ec2926ef66c0c37928dd24817bb6fb1799506dce54d972f014d3054",
-      "bytes": 746
+      "sha256": "7a363af7a8d2c0d37f1e43215a225a61eeb174a41d6644aaf43bd25cea6c7269",
+      "bytes": 759
     },
     {
-      "path": "evidence/source-review.json",
+      "path": "项目文档/evidence/source-review.json",
       "sha256": "e8a0131cd1c7da35a4c91c4300c46f48c14d93fcfb4037648c058704b09ea844",
       "bytes": 5026
     },
     {
-      "path": "evidence/upstream-review.json",
+      "path": "项目文档/evidence/upstream-review.json",
       "sha256": "b069d693db898f1e7e14f31c01818b8d7cea21c9938cda3995a869bc3b956a41",
       "bytes": 8381
     },
     {
-      "path": "evidence/validation.json",
+      "path": "项目文档/evidence/validation.json",
       "sha256": "0bdba4f061fca7ac6d5e524387f46b3b47927f69d9b6a48c09bf96dbe8dbdd44",
       "bytes": 3793
     },
