@@ -1,3 +1,5 @@
+> 本页保留 0.1.3 的历史验证记录；0.1.4 的发布验证状态请以对应提交的 GitHub Actions 和 Release 资产为准。
+
 ## Current version 0.1.3: applicable material notices, 2026-10-03
 
 New implementation author and maintainer: dhtfish98. Package version: `0.1.3`.
