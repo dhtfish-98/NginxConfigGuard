@@ -1,4 +1,4 @@
-> 目录已整理：文档在「项目文档」，构建、缓存与暂存输入在「Build」。从仓库根目录运行 `python3 构建.py --build`；如需使用本文原有源码命令，先运行 `python3 构建.py --stage --ci`，再进入 `Build/源码`。暂存会恢复原输入路径。现有版本和历史验证记录按各自提交理解。
+> v0.1.5 将文档集中在「项目文档」，把暂存、缓存和编译产物放在源码仓库**外部**的中央 `Build`。从仓库根目录运行 `python3 构建.py --build --build-root /path/to/workspace/Build`；如需使用本文原有源码命令，先运行 `python3 构建.py --stage --ci --build-root /path/to/workspace/Build`，再进入 `Build/NginxConfigGuard/源码`。暂存只复制 Git 已跟踪的普通文件，逐段拒绝来源路径中的符号链接；恢复文档必须来自同一跟踪清单并匹配哈希。输出项目、暂存和缓存目录也拒绝既有链接，未跟踪文件与 `.git` 不进入暂存。不指定路径时默认使用仓库同级 `Build`。历史验证记录仍只对应其原提交。
 
 # NginxConfigGuard
 

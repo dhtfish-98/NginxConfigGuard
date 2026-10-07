@@ -3,7 +3,7 @@
   "project": "NginxConfigGuard",
   "author": "dhtfish98",
   "kind": "python",
-  "base_public_commit": "c1036a1a7fff48a5cf325b4703b3adaae5c750cd",
+  "base_public_commit": "6366317e7817e121d981ed9e9fbd9714e76f3fac",
   "restored_inputs": [
     {
       "original": "DEFENSIVE_SCOPE.md",
@@ -23,12 +23,12 @@
     {
       "original": "README.md",
       "stored": "项目文档/README.md",
-      "sha256": "1c0fda4c07f27fdb6b6832d8f08f6e7e9a1abb8974b3985602921518b81a52bc"
+      "sha256": "34609a35c8be13b9d84fffb815b51114b9977a9d4abe7697596de454d4d308fe"
     },
     {
       "original": "VALIDATION.md",
       "stored": "项目文档/VALIDATION.md",
-      "sha256": "80ac21316690ca6cb8e8c54b2764ccc960f3a7d9274244ec13cdffb6b2cde42d"
+      "sha256": "970a58413f7bdac9bfb70b0df792f0704fda724d8f1d8d1da3227632d47e8add"
     }
   ],
   "platform_entries": []

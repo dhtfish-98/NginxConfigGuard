@@ -6,8 +6,6 @@ build/
 dist/
 
 # All generated build outputs and staging are local.
-!/Build/
-/Build/*
-!/Build/.gitignore
+/Build/
 __pycache__/
 *.py[cod]

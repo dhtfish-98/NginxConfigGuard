@@ -1,6 +1,28 @@
-> 本页保留 0.1.3 的历史验证记录；0.1.4 的发布验证状态请以对应提交的 GitHub Actions 和 Release 资产为准。
+> v0.1.5 的外部 Build 路径和已跟踪文件暂存须以本版本运行收据、GitHub Actions 和 Release 资产回验；以下 0.1.3 历史记录不自动验证新版本。
 
-## Current version 0.1.3: applicable material notices, 2026-10-03
+## Version 0.1.5: external build staging, 2026-10-08
+
+This revision changes packaging/layout support and the version constant. The six
+other runtime modules remain byte-identical to the v0.1.4 public baseline
+`6366317e7817e121d981ed9e9fbd9714e76f3fac`. Documentation remains under
+`项目文档`; staged source, caches, logs and distributions use an external central
+Build directory.
+
+The 72-test suite consists of 55 existing offline configuration checks and 17
+build-layout checks. The latter cover tracked-only staging, source leaf/parent
+links, restored tracked inputs and byte hashes, conflicting aliases, output
+parent links, existing-stage refusal, source-contained Build paths, bounded
+project names and linked project/cache directories. All fixtures are inert
+temporary files owned by the test run. No external service is exercised.
+
+Final source, sdist and isolated wheel-consumer results, interpreter versions,
+installed module origins, file identities and asset hashes belong in external
+receipts. Hosted main/tag CI and downloaded Release assets must be verified after
+the final commit. No local test count establishes publication or CVP eligibility.
+The builder requires caller-owned directories without concurrent modification;
+it does not claim race-proof filesystem isolation against another process.
+
+## Historical version 0.1.3: applicable material notices, 2026-10-03
 
 New implementation author and maintainer: dhtfish98. Package version: `0.1.3`.
 

@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
   "project": "NginxConfigGuard",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "author": "dhtfish98",
   "scope": "Current selected implementation and repository files; self manifest excluded to avoid a hash cycle. Upstream source commits remain in ORIGIN/source review records.",
   "files": [
     {
       "path": ".github/workflows/ci.yml",
-      "sha256": "fe7808395fdb7e7d228a199b82a2ece1454f0c7fb2837f1bede362eae7b884cc",
-      "bytes": 2228
+      "sha256": "e4659c61d974f0984c4f922179de1a59de963be215acf161f7598fb8b8437d0c",
+      "bytes": 2201
     },
     {
       "path": ".gitignore",
-      "sha256": "11c8b3d8bf538026e24d75c9846cedb1af16d175ef585be328952d32426d9a4d",
-      "bytes": 174
+      "sha256": "b9614b780ac7248257eca48c977075838f3b08bd9c596f63940b56a6ded36533",
+      "bytes": 145
     },
     {
       "path": "MANIFEST.in",
@@ -21,28 +21,13 @@
       "bytes": 759
     },
     {
-      "path": "项目文档/evidence/source-review.json",
-      "sha256": "e8a0131cd1c7da35a4c91c4300c46f48c14d93fcfb4037648c058704b09ea844",
-      "bytes": 5026
-    },
-    {
-      "path": "项目文档/evidence/upstream-review.json",
-      "sha256": "b069d693db898f1e7e14f31c01818b8d7cea21c9938cda3995a869bc3b956a41",
-      "bytes": 8381
-    },
-    {
-      "path": "项目文档/evidence/validation.json",
-      "sha256": "0bdba4f061fca7ac6d5e524387f46b3b47927f69d9b6a48c09bf96dbe8dbdd44",
-      "bytes": 3793
-    },
-    {
       "path": "pyproject.toml",
-      "sha256": "fd088d0d26c3304ce0808fa1dd7923818c427bc9a056beaf7b19d2a3e9bf7bba",
+      "sha256": "9356842050816df7e01845061144402a8f61b94aaec6abd502980e260147aeb4",
       "bytes": 731
     },
     {
       "path": "src/nginx_config_guard/__init__.py",
-      "sha256": "52047cf1d696cdb3bc15f2ea461d8c414d85f2ae49c05f1d80dc83374b302706",
+      "sha256": "30e45bbdb20f368f6fabace7f795a3fb75a5060241c754107552f34decc6b8cb",
       "bytes": 199
     },
     {
@@ -76,19 +61,24 @@
       "bytes": 812
     },
     {
+      "path": "tests/test_build_layout.py",
+      "sha256": "b709d46d0b4719326bfb7f8dd3cd13f49235979259baa4c02955fdab1b5addbb",
+      "bytes": 8632
+    },
+    {
       "path": "tests/test_guard.py",
       "sha256": "033d300612026607e1ce325493d30b9dec3486147afab14b09b9b3f37a57a2cc",
       "bytes": 27808
     },
     {
-      "sha256": "248c7594ad67a2d9380273b1dd68986253a2d9bac75595f1f6e3647720335c8e",
-      "bytes": 6787,
-      "path": "构建.py"
+      "path": "构建.py",
+      "sha256": "32867fd287f6bc52909582264fa7a03ec23b3e9148dc8b3ddb6db2a1bd432d84",
+      "bytes": 9402
     },
     {
-      "sha256": "4a2b07740ab494bf0210507abac5b907bb38844ed006461879e1e2a4ae5f5d8c",
-      "bytes": 1108,
-      "path": "构建配置.json"
+      "path": "构建配置.json",
+      "sha256": "f7b0ac96f4c8905b247bae639cf0bde05c5653ec16f35f3decdb47aac2c26903",
+      "bytes": 1108
     },
     {
       "path": "项目文档/DEFENSIVE_SCOPE.md",
@@ -107,23 +97,38 @@
     },
     {
       "path": "项目文档/README.md",
-      "sha256": "1c0fda4c07f27fdb6b6832d8f08f6e7e9a1abb8974b3985602921518b81a52bc",
-      "bytes": 10294
+      "sha256": "34609a35c8be13b9d84fffb815b51114b9977a9d4abe7697596de454d4d308fe",
+      "bytes": 10683
     },
     {
       "path": "项目文档/VALIDATION.md",
-      "sha256": "80ac21316690ca6cb8e8c54b2764ccc960f3a7d9274244ec13cdffb6b2cde42d",
-      "bytes": 5738
+      "sha256": "970a58413f7bdac9bfb70b0df792f0704fda724d8f1d8d1da3227632d47e8add",
+      "bytes": 7103
     },
     {
+      "path": "项目文档/evidence/source-review.json",
+      "sha256": "e8a0131cd1c7da35a4c91c4300c46f48c14d93fcfb4037648c058704b09ea844",
+      "bytes": 5026
+    },
+    {
+      "path": "项目文档/evidence/upstream-review.json",
+      "sha256": "b069d693db898f1e7e14f31c01818b8d7cea21c9938cda3995a869bc3b956a41",
+      "bytes": 8381
+    },
+    {
+      "path": "项目文档/evidence/validation.json",
+      "sha256": "0bdba4f061fca7ac6d5e524387f46b3b47927f69d9b6a48c09bf96dbe8dbdd44",
+      "bytes": 3793
+    },
+    {
+      "path": "项目文档/历史/目录更新20261003/SOURCE_MANIFEST.json.public-c1036a1a7fff.json",
       "sha256": "e965b381df89a0780e25a4c76d13a89dfbe0f769b88cf9f194a3113b2bb7641d",
-      "bytes": 3555,
-      "path": "项目文档/历史/目录更新20261003/SOURCE_MANIFEST.json.public-c1036a1a7fff.json"
+      "bytes": 3555
     },
     {
       "path": "项目文档/目录与构建.md",
-      "sha256": "3f7599e7a43cd47108377905ec46e6894317d8e574e3f865157e9fc9bc6d7c72",
-      "bytes": 816
+      "sha256": "31c27a120754b97e870e241f5cb328155dfbde96cb6f85c0b5dc20d5e894a7c4",
+      "bytes": 1711
     }
   ],
   "license_cleanup": "Only approved reference-only copies removed; applicable data/code/terms and own LICENSE preserved.",
@@ -131,7 +136,8 @@
     "base_public_commit": "c1036a1a7fff48a5cf325b4703b3adaae5c750cd",
     "original_inventory": "项目文档/历史/目录更新20261003/SOURCE_MANIFEST.json.public-c1036a1a7fff.json",
     "original_inventory_sha256": "e965b381df89a0780e25a4c76d13a89dfbe0f769b88cf9f194a3113b2bb7641d",
-    "path_view": "Canonical repository paths; the builder also restores byte-identical legacy aliases under ignored Build for existing packaging checks",
-    "scope": "Current file inventory and packaging paths only; runtime bytes/version/API unchanged. Historical validation and security conclusions are retained, not rerun or newly certified."
+    "path_view": "Canonical repository paths; builder stages tracked regular inputs with component checks into external central Build and restores verified tracked legacy aliases",
+    "scope": "External central Build layout and tracked-only staging; targeted tests and current release evidence are recorded for v0.1.5 separately.",
+    "release_base_public_commit": "6366317e7817e121d981ed9e9fbd9714e76f3fac"
   }
 }
